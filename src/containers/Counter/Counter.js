@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+
 import CounterControl from '../../components/CounterControl/CounterControl';
 import CounterOutput from '../../components/CounterOutput/CounterOutput';
-import { increment, decrement, add, subtract, store_result, delete_result } from '../../store/actions/action';
+import { increment, decrement, add, subtract, store_result, delete_result } from '../../store/actions/index';
 
 class Counter extends Component {
   render() {
