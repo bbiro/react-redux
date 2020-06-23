@@ -9,8 +9,9 @@ export const saveResult = (res) => {
 
 // because of redux-thunk we can call async actions
 export const store_result = (res) => {
-  return (dispatch) => {
+  return (dispatch, getState) => {
     setTimeout(() => {
+      const oldCounter = getState().ctr.counter;
       dispatch(saveResult(res));
     }, 2000);
   };
